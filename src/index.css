@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .chat-bubble {
+    @apply max-w-[80%] rounded-2xl px-4 py-2 mb-2;
+  }
+
+  .user-bubble {
+    @apply chat-bubble bg-gray-200; /* Light mode user bubble */
+  }
+
+  .user-bubble.dark-mode {
+    @apply bg-gray-700; /* Dark mode user bubble */
+  }
+
+  .bot-bubble {
+    @apply chat-bubble bg-gray-300; /* Light mode bot bubble */
+  }
+
+  .bot-bubble.dark-mode {
+    @apply bg-gray-800; /* Dark mode bot bubble */
+  }
+
+  body {
+    background-color: #f9fafb; /* Light mode background */
+    color: #1f2937; /* Light mode text color */
+  }
+
+  body.dark-mode {
+    background-color: #1e293b; /* Dark mode background */
+    color: #ffffff; /* Dark mode text color */
+  }
+}
+
+@layer components {
+  .chat-bubble {
+    @apply max-w-[80%] rounded-2xl px-4 py-2 mb-2;
+  }
+  
+  .user-bubble {
+    @apply chat-bubble bg-primary-600 text-white ml-auto;
+  }
+  
+  .bot-bubble {
+    @apply chat-bubble bg-gray-200 dark:bg-gray-700 mr-auto;
+  }
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
